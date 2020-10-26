@@ -30,7 +30,7 @@ class App extends React.Component {
     this.setState({
       todoData:[...this.state.todoData, {
         task:name,
-        id:this.state.todoData.length,
+        id:this.state.todoData.length + 1,
         completed:false,
       }]
     })
@@ -60,7 +60,7 @@ class App extends React.Component {
       <div>
         <h2>Welcome to my Todo App!</h2>
         <TodoForm handleAddTodo={this.handleAddTodo}   />
-        <TodoList todoData={this.state.todoData} handleToggleItem={this.handleToggleItem} />
+        <TodoList todoData={this.state.todoData} handleToggleItem={this.handleToggleItem} handleClearItems={this.clearItems} />
       </div>
     );
   }

@@ -14,13 +14,15 @@ export default class TodoForm extends Component {
         event.preventDefault();
         this.props.handleAddTodo(this.state.input)
     }
+    
 
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
                 <input value={this.state.input} onChange={this.handleChanges} type="text" name="toDo" />
                 <button>Add Todo</button>
-                <button>Clear Completed</button>
+                
+                {/*console.log(this.props.handleClearItems)*/}
             </form>
         )
     }
